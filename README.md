@@ -1,1 +1,3 @@
 # 3d-software-rendering
+
+My attempt to create a rendering engine without using any GPU compute...

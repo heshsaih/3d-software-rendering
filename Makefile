@@ -1,2 +1,3 @@
-main: main.c
-	clang -o main.exe main.c
+main.exe: src/main.c
+	clang -o main.exe src/main.c
+

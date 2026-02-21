@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include "goop/goop.h"
 
 int main() {
-    printf("Hello, world!\n");
+    goop_init();
     return 0;
 }

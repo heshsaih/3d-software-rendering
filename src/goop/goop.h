@@ -1,0 +1,1 @@
+void goop_init();

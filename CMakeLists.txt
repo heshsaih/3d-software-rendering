@@ -13,15 +13,13 @@ set(DEPENDENCIES_DIR "dependencies/")
 set(SDL3_DIR "${DEPENDENCIES_DIR}/SDL3-3.4.2/cmake")
 find_package(SDL3 REQUIRED)
 
-set(SOURCES src/goop/goop.c src/goop/goop.h)
-
-add_library(GOOP STATIC
+add_library(GOOP
     src/goop/goop.c
 )
+target_include_directories(GOOP PUBLIC src/goop)
+target_link_libraries(GOOP PRIVATE SDL3::SDL3)
 
 add_executable(${PROJECT_NAME}
     src/main.c
 )
-
-target_link_libraries(${PROJECT_NAME} PRIVATE SDL3::SDL3 GOOP)
-
+target_link_libraries(${PROJECT_NAME} PRIVATE GOOP)

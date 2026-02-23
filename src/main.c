@@ -1,8 +1,10 @@
-#include "goop.h"
+#include "goop/goop.h"
 
 int main() {
-    goop_context *ctx = goop_init();
-    goop_log_info("amogus");
-    goop_log_error("zdechlem");
+    int status = goop_init();
+    goop_log_info("Info lot tego");
+    goop_log_warn("warn lotasiet");
+    goop_log_error("ded");
+    goop_destroy();
     return 0;
 }
